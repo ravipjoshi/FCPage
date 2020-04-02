@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Home from './Components/Home';
 
-const Routes =(props) => {
+const Routes = (props) => {
   return (
     <Layout>
           <Switch>

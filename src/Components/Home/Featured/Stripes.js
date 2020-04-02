@@ -1,5 +1,5 @@
  import React, { Component } from 'react';
- //import { easePolyOut } from 'd3-ease';
+ import { easePolyOut } from 'd3-ease';
  import Animate from 'react-move/Animate';
 
  class Stripes extends Component {
@@ -30,7 +30,7 @@
         ]
     }
     showStripes = () =>(
-        this.state.stripes.map((stripe,i)=>(
+    this.state.stripes.map((stripe,i)=>(
             <Animate 
                 key={i}
                 show={true}
@@ -47,18 +47,23 @@
                     left:[stripe.left],
                     rotate:[stripe.rotate],
                     top:[stripe.top],
-                    timing:{delay:500, duration:200}
+                    timing:{delay:stripe.delay, duration:200, ease: easePolyOut},
+                    events:{
+                        end(){
+                            console.log('Animation finished');
+                        }
+                    }
                 }}
                 >
                  {(opacity,left,rotate,top,background)=>{
                         return(
                             <div
-                                className="strip" 
+                                className="stripe" 
                                 style={{
                                     background,
                                     opacity,
-                                    trasnform:  `rotate(${rotate}) translate(${left},0px)`
-                                }}>
+                                    transform:  `rotate(${rotate}deg) translate(${left}px),${top}px`
+                                }}> 
                                 
                             </div>
                         )
