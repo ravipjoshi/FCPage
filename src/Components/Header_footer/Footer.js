@@ -10,7 +10,7 @@ const Footer = () => {
                     height="70px"
                     link={true}
                     linkTo="/"
-                    />
+                />
             </div>
             <div className="footer_discl">
                   FC Manchaster City 2020. All rights reserved  

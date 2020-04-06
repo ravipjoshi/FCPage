@@ -8,7 +8,7 @@ const Routes = (props) => {
   return (
     <Layout>
           <Switch>
-               <Route path="/" exact component={Home} />
+               <Route exact component={Home}  path="/"  />
           </Switch>
           
     </Layout>
