@@ -122,7 +122,7 @@ class Text extends Component {
                             transform: `translate(550px,201px)`
                         }}
                         >
-                       1
+                       
                     </div>
                 )
             }}
