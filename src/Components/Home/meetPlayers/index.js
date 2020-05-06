@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import Stripes from '../../../Resources/images/stripes.png';
 import  { Tag } from '../../Ui/Misc';
 import Reveal from 'react-reveal';
-import HomeCards from './cards'
+import HomeCards from './cards';
 
 class MeetPlayers extends Component {
     state ={
-        show:false
+        show:true
     }
 
     render() {
@@ -15,10 +15,11 @@ class MeetPlayers extends Component {
           <Reveal
             fraction={0.7}
             onReaveal={()=>{
-                this.setState({
+                 this.setState({
                     show:true
                 })
-            }}>  
+            }}
+            >  
             <div 
                 className="home_meetplayers"
                 style={{background:`#ffffff url(${Stripes})`}} 
@@ -29,6 +30,7 @@ class MeetPlayers extends Component {
                             <HomeCards
                                 show={this.state.show}
                             />
+                            
                         </div>
                         <div className="home_text_wrapper">
                             <div>

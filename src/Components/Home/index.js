@@ -1,7 +1,8 @@
 import React from 'react';
 import Featured from './Featured';
 import Matches from './Matches';
-import MeetPlayers from './meetPlayers'
+import MeetPlayers from './meetPlayers';
+import PromoAnimation from './promotions'
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
              <Featured/>
              <Matches/>   
              <MeetPlayers/>
+             <PromoAnimation/>
         </div>
          
     );
